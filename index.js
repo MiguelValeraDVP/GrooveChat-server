@@ -18,10 +18,13 @@ app.use("/api/messages/", messageRoutes);
 const puerto = process.env.PORT;
 
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://miguelvalera97:oCywjm6F8gLIw9lo@groovechat.2nwtwiv.mongodb.net/?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("DB connection succesfull");
   })
